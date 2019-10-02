@@ -12,3 +12,9 @@
   width: 100%;
   color: white;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

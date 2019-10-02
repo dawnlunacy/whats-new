@@ -14,7 +14,12 @@ class App extends Component {
   render () {
     return (
       <div className="app">
-          <NewsContainer localNews={this.state.local}/>
+        <main>
+          <section className="newsContainer">
+            <NewsContainer localNews={this.state.local}/>
+          </section>
+        </main>
+        
       </div>
     );
   }
