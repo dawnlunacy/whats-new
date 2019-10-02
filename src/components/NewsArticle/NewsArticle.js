@@ -3,9 +3,9 @@ import './NewsArticle.css';
 
 const NewsArticle = (props) => {
     return (
-        <article> 
-            <img src={props.img} alt="" width="300" height="200"/> 
-            <h3> {props.headlines}</h3>
+        <article className="newsArticle"> 
+            <img src={props.img} alt="" className="newsImage" width="300" height="200"/> 
+            <h3> {props.headline}</h3>
             <p>{props.description}</p>
             <footer>
                 <a href={props.url}>Link to article</a> 

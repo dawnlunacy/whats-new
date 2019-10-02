@@ -15,9 +15,7 @@ class App extends Component {
     return (
       <div className="app">
         <main>
-          {/* <section className="newsContainer"> */}
             <NewsContainer news={this.state.local}/>
-          {/* </section> */}
         </main>
         
       </div>
