@@ -4,3 +4,8 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
 }
+
+footer {
+    background-color: #B56BF1;
+    height: 10%;
+}
