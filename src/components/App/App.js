@@ -15,9 +15,9 @@ class App extends Component {
     return (
       <div className="app">
         <main>
-          <section className="newsContainer">
-            <NewsContainer localNews={this.state.local}/>
-          </section>
+          {/* <section className="newsContainer"> */}
+            <NewsContainer news={this.state.local}/>
+          {/* </section> */}
         </main>
         
       </div>
