@@ -4,7 +4,7 @@ import './Menu.css';
 const Menu = (props) => {
     console.log("props",props)
     const menuOptions = Object.keys(props.menu);
-    const cleanMenuOptions = menuOptions.filter(menuOption => menuOption !== "currentSelected");
+    const cleanMenuOptions = menuOptions.filter(menuOption => menuOption !== "currentSelected" && menuOption !== "currentSearched");
     const menuOption = cleanMenuOptions.map(option => <li key={option}><button className={[option,"menuItem"].join(' ')} onClick={event => props.toggleCurrentSelected(event)}> {option} </button></li>)
 return (
     <nav> 

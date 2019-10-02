@@ -31,7 +31,7 @@ class SearchForm extends Component {
                 <input
                 type="text"
                 placeholder="Search for news here"
-                name="search"
+                name="input"
                 value={this.state.input}
                 onChange={event => this.handleChange(event)}
                 />
