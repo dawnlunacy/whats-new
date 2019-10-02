@@ -1,6 +1,11 @@
 import React from 'react';
-import './Menu.css'
+import './Menu.css';
 
-// MENU COMPONENT CODE GOES HERE
+const Menu = (props) => {
+    console.log(props)
+return (
+ <p> Hi </p>
+)
+}
 
 export default Menu;
