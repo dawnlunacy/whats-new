@@ -17,7 +17,8 @@ class App extends Component {
       technology: technology,
       entertainment: entertainment,
       science: science,
-      health: health
+      health: health,
+      currentSelected: local
     }
   }
 
@@ -25,13 +26,21 @@ class App extends Component {
     // this.setState({...Object.values(this.state)})
   }
 
+  toggleCurrentSelected = (event) => {
+    const selectedTopic = event.target.classList[0];
+    this.setState({currentSelected: this.state[selectedTopic]})
+  }
+
   render () {
     return (
       <div className="app">
         <main>
-            <Menu menu={this.state} />
+            <Menu menu={this.state} toggleCurrentSelected={this.toggleCurrentSelected} />
+            <div className="mainWrapper">
             <SearchForm searchNewsFor={this.searchNewsFor} />
-            <NewsContainer news={this.state.local}/>
+            <NewsContainer news={this.state.currentSelected}/>
+            </div>
+            
             
         </main>
         
