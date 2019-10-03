@@ -13,20 +13,23 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-        local: local,
-        technology: technology,
-        entertainment: entertainment,
-        science: science,
-        health: health,
+      local: local,
+      technology: technology,
+      entertainment: entertainment,
+      science: science,
+      health: health,
       currentSelected: local,
-      currentSearched: {}
-
+      currentSearched: []
     }
   }
 
   searchNewsFor = (newsToSearch) => {
-    const findTopicInNews = this.state.currentSelected.filter(article => article.headline.includes(newsToSearch) || article.description.includes(newsToSearch))
+    console.log("search", newsToSearch)
+    const currentTopic = this.state.currentSelected
+    const findTopicInNews = this.state.currentSelected.filter(article => article.headline.toUpperCase().includes(newsToSearch) || article.description.toUpperCase().includes(newsToSearch))
+    console.log("find", findTopicInNews)
     this.setState({currentSearched: findTopicInNews})
+    console.log("searched", this.state.currentSearched)
   }
 
   toggleCurrentSelected = (event) => {
@@ -45,7 +48,6 @@ class App extends Component {
             <NewsContainer news={this.state.currentSelected}/>
             </div>
         </main>
-        
       </div>
     );
   }

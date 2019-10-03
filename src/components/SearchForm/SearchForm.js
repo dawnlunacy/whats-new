@@ -16,11 +16,10 @@ class SearchForm extends Component {
             event.preventDefault();
 
             const newsTopicToSearch = {
-                topic: this.props.menuOption,
                 keyword: this.state.input
             }
 
-            this.props.searchNewsFor(newsTopicToSearch)
+            this.props.searchNewsFor(newsTopicToSearch.keyword.toUpperCase())
 
             this.setState({input: ""})
         };
