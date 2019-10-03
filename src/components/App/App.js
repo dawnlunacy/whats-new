@@ -18,24 +18,26 @@ class App extends Component {
       entertainment: entertainment,
       science: science,
       health: health,
-      currentSelected: local,
-      currentSearched: []
+      currentTopic: local,
+      currentDisplay: local
     }
   }
 
   searchNewsFor = (newsToSearch) => {
     console.log("search", newsToSearch)
-    const currentTopic = this.state.currentSelected
-    const findTopicInNews = this.state.currentSelected.filter(article => article.headline.toUpperCase().includes(newsToSearch) || article.description.toUpperCase().includes(newsToSearch))
+    const currentTopic = this.state.currentTopic
+    const findTopicInNews = this.state.currentTopic.filter(article => article.headline.toUpperCase().includes(newsToSearch) || article.description.toUpperCase().includes(newsToSearch))
     console.log("find", findTopicInNews)
-    this.setState({currentSearched: findTopicInNews})
-    console.log("searched", this.state.currentSearched)
+    this.setState({currentDisplay: findTopicInNews})
+    console.log("searched", this.state.currentDisplay)
   }
 
   toggleCurrentSelected = (event) => {
     const selectedTopic = event.target.classList[0];
     console.log(selectedTopic)
-    this.setState({currentSelected: this.state[selectedTopic]})
+    this.setState({currentTopic: this.state[selectedTopic]})
+    this.setState({currentDisplay: this.state[selectedTopic]})
+  
   }
 
   render () {
@@ -45,7 +47,7 @@ class App extends Component {
             <Menu menu={this.state} toggleCurrentSelected={this.toggleCurrentSelected} />
             <div className="mainWrapper">
             <SearchForm searchNewsFor={this.searchNewsFor} />
-            <NewsContainer news={this.state.currentSelected}/>
+            <NewsContainer news={this.state.currentDisplay}/>
             </div>
         </main>
       </div>
