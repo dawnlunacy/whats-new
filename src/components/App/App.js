@@ -24,12 +24,8 @@ class App extends Component {
   }
 
   searchNewsFor = (newsToSearch) => {
-    console.log("search", newsToSearch)
-    const currentTopic = this.state.currentTopic
     const findTopicInNews = this.state.currentTopic.filter(article => article.headline.toUpperCase().includes(newsToSearch) || article.description.toUpperCase().includes(newsToSearch))
-    console.log("find", findTopicInNews)
     this.setState({currentDisplay: findTopicInNews})
-    console.log("searched", this.state.currentDisplay)
   }
 
   toggleCurrentSelected = (event) => {
