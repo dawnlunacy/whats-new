@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsArticle should match the NewsArticle snapshot with the data passed to it 1`] = `
+<article
+  className="newsArticle"
+>
+  <img
+    alt=""
+    className="newsImage"
+    height="200"
+    src="https://i.pinimg.com/originals/df/ad/d7/dfadd7765de8e922206401f0529cae9a.jpg"
+    width="300"
+  />
+  <h3>
+     
+     Robbie's Favorite
+  </h3>
+  <p />
+  <footer>
+    <a
+      href="https://www.pinterest.nz/pin/575546027375685533/"
+    >
+      Link to article
+    </a>
+  </footer>
+</article>
+`;
