@@ -13,29 +13,29 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      local: local,
-      technology: technology,
-      entertainment: entertainment,
-      science: science,
-      health: health,
-      currentTopic: local,
-      currentDisplay: local
+      local: [],
+      technology: [],
+      entertainment: [],
+      science: [],
+      health: [],
+      currentTopic: [],
+      currentDisplay: []
     }
 
-    // this.fetchData();
   }
-
-  // fetchData() {
-  //   fetch("https://whats-new-api.herokuapp.com/api/v1/news")
-  //   .then(data => data.json())
-  //   .then(data => this.setState({
-  //     local: data.local, 
-  //     technology: data.technology,
-  //     entertainment: data.entertainment,
-  //     science: data.science,
-  //     health: data.health}))
-  //   .catch(error => console.log(error))
-  // }
+  componentDidMount() {
+    fetch("https://whats-new-api.herokuapp.com/api/v1/news")
+    .then(data => data.json())
+    .then(data => this.setState({
+      local: data.local, 
+      technology: data.technology,
+      entertainment: data.entertainment,
+      science: data.science,
+      health: data.health,
+      currentTopic: data.local,
+      currentDisplay: data.local}))
+    .catch(error => console.log(error))
+  }
 
   searchNewsFor = (newsToSearch) => {
     const findTopicInNews = this.state.currentTopic.filter(article => article.headline.toUpperCase().includes(newsToSearch) || article.description.toUpperCase().includes(newsToSearch))
@@ -51,6 +51,7 @@ class App extends Component {
   }
 
   render () {
+    console.log("STATE", this.state)
     return (
       <div className="app">
         <main>
