@@ -22,10 +22,9 @@ class App extends Component {
       currentDisplay: local
     }
 
-    // this.fetchData();
   }
 
-  // fetchData() {
+  // componentDidMount() {
   //   fetch("https://whats-new-api.herokuapp.com/api/v1/news")
   //   .then(data => data.json())
   //   .then(data => this.setState({
