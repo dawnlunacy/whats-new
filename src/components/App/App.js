@@ -8,6 +8,11 @@ import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
 import SearchForm from '../SearchForm/SearchForm';
+import { FaMapMarked } from 'react-icons/fa'
+import { FaCogs } from 'react-icons/fa';
+import { FaTicketAlt } from 'react-icons/fa';
+import { FaRocket } from 'react-icons/fa';
+import { FaHeartbeat } from 'react-icons/fa';
 
 class App extends Component {
   constructor() {
@@ -19,7 +24,8 @@ class App extends Component {
       science: science,
       health: health,
       currentTopic: local,
-      currentDisplay: local
+      currentDisplay: local,
+      icons: [FaMapMarked, FaCogs, FaTicketAlt, FaRocket, FaHeartbeat]
     }
 
   }
@@ -53,7 +59,7 @@ class App extends Component {
     return (
       <div className="app">
         <main>
-            <Menu menu={this.state} toggleCurrentSelected={this.toggleCurrentSelected} />
+            <Menu menu={this.state} toggleCurrentSelected={this.toggleCurrentSelected}/>
             <div className="mainWrapper">
             <SearchForm searchNewsFor={this.searchNewsFor} />
             <NewsContainer news={this.state.currentDisplay}/>
