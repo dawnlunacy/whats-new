@@ -7,6 +7,7 @@ import health from '../../data/health';
 import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
+import SearchForm from '../SearchForm/SearchForm';
 
 class App extends Component {
   constructor() {
@@ -20,12 +21,18 @@ class App extends Component {
     }
   }
 
+  searchNewsFor = (newsToSearch) => {
+    // this.setState({...Object.values(this.state)})
+  }
+
   render () {
     return (
       <div className="app">
         <main>
-            <NewsContainer news={this.state.local}/>
             <Menu menu={this.state} />
+            <SearchForm searchNewsFor={this.searchNewsFor} />
+            <NewsContainer news={this.state.local}/>
+            
         </main>
         
       </div>
