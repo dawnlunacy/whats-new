@@ -7,7 +7,13 @@
 .app {
   display: flex;
   background: #141527;
-  height: 100vh;
   text-align: center;
+  width: 100%;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }

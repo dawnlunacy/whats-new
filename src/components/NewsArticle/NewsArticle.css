@@ -1,0 +1,9 @@
+.newsArticle {
+ background-color: #000222;
+ justify-content: space-around;
+ max-width: 500px;
+}
+
+.newsImage {
+    width: 100%;
+}
