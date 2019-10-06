@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsContainer should match the news container snapshot with all data passed in correctly 1`] = `
+<section
+  className="newsContainer"
+>
+  <NewsArticle
+    headline="PugSweaterCeption"
+    img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz_nzKAPAFYGHX6mSTun5HTDv3H84TxGOp9XLXovVMRQC1isQdUw"
+    key="11"
+    url="https://imgur.com/t/pugly/rYptNJ9"
+  />
+  <NewsArticle
+    headline=" Robbie's Favorite"
+    img="https://i.pinimg.com/originals/df/ad/d7/dfadd7765de8e922206401f0529cae9a.jpg"
+    key="22"
+    url="https://www.pinterest.nz/pin/575546027375685533/"
+  />
+</section>
+`;

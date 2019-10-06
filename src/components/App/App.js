@@ -13,28 +13,54 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      local: local,
-      technology: technology,
-      entertainment: entertainment,
-      science: science,
-      health: health
+      local: [],
+      technology: [],
+      entertainment: [],
+      science: [],
+      health: [],
+      currentTopic: [],
+      currentDisplay: []
     }
+
+  }
+  componentDidMount() {
+    fetch("https://whats-new-api.herokuapp.com/api/v1/news")
+    .then(data => data.json())
+    .then(data => this.setState({
+      local: data.local, 
+      technology: data.technology,
+      entertainment: data.entertainment,
+      science: data.science,
+      health: data.health,
+      currentTopic: data.local,
+      currentDisplay: data.local}))
+    .catch(error => console.log(error))
   }
 
   searchNewsFor = (newsToSearch) => {
-    // this.setState({...Object.values(this.state)})
+    const findTopicInNews = this.state.currentTopic.filter(article => article.headline.toUpperCase().includes(newsToSearch) || article.description.toUpperCase().includes(newsToSearch))
+    this.setState({currentDisplay: findTopicInNews})
+  }
+
+  toggleCurrentSelected = (event) => {
+    const selectedTopic = event.target.classList[0];
+    console.log(selectedTopic)
+    this.setState({currentTopic: this.state[selectedTopic]})
+    this.setState({currentDisplay: this.state[selectedTopic]})
+  
   }
 
   render () {
+    console.log("STATE", this.state)
     return (
       <div className="app">
         <main>
-            <Menu menu={this.state} />
+            <Menu menu={this.state} toggleCurrentSelected={this.toggleCurrentSelected} />
+            <div className="mainWrapper">
             <SearchForm searchNewsFor={this.searchNewsFor} />
-            <NewsContainer news={this.state.local}/>
-            
+            <NewsContainer news={this.state.currentDisplay}/>
+            </div>
         </main>
-        
       </div>
     );
   }

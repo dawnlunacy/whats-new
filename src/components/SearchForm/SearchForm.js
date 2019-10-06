@@ -9,6 +9,7 @@ class SearchForm extends Component {
         };
     }
         handleChange = event => {
+            console.log("event", event)
             this.setState({ [event.target.name]: event.target.value })
         };
 
@@ -16,11 +17,10 @@ class SearchForm extends Component {
             event.preventDefault();
 
             const newsTopicToSearch = {
-                topic: this.props.menuOption,
                 keyword: this.state.input
             }
 
-            this.props.searchNewsFor(newsTopicToSearch)
+            this.props.searchNewsFor(newsTopicToSearch.keyword.toUpperCase())
 
             this.setState({input: ""})
         };
@@ -31,7 +31,7 @@ class SearchForm extends Component {
                 <input
                 type="text"
                 placeholder="Search for news here"
-                name="search"
+                name="input"
                 value={this.state.input}
                 onChange={event => this.handleChange(event)}
                 />
