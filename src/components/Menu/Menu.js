@@ -11,7 +11,7 @@ const Menu = (props) => {
         return <li key={option} ><button 
                                 className={[option,"menuItem"].join(' ')} 
                                 onClick={event => props.toggleCurrentSelected(event)}>  
-                                 {props.menu.icons[i]()}
+                                 {props.menu.icons[i]()} 
                                  {option} 
                              </button></li>})
 return (
