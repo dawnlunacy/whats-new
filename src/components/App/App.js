@@ -49,7 +49,6 @@ class App extends Component {
 
   toggleCurrentSelected = (event) => {
     const selectedTopic = event.target.classList[0];
-    console.log(selectedTopic)
     this.setState({currentTopic: this.state[selectedTopic]})
     this.setState({currentDisplay: this.state[selectedTopic]})
   
