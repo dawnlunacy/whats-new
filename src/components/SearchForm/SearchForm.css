@@ -1,0 +1,30 @@
+form {
+    height: 50px;
+    width: 100 vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input {
+    height: 30px;
+    width: 45%;
+    margin-top: 10px;
+    background-color: #141527;
+    text-align: center;
+    color: white;
+    font-size: 0.9em;
+}
+
+.search-btn {
+    height: 30px;
+    width: 15%;
+    margin-top: 10px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: bold;
+    background-color: #B56BF1;
+    color: white;
+}
