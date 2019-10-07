@@ -17,6 +17,8 @@
  Project Management Tools Utilized: 
  * Trello ([Whats-New](https://trello.com/b/SmKCUTHO/whats-new))
 
+ ### Screen Shot
+
 ![what's new screenshot](./screenshots/whats-new.png)
 
 
