@@ -16,7 +16,7 @@ const Menu = (props) => {
                              </button></li>})
 return (
     <nav> 
-        <h1>What's New</h1> 
+        <h1>What's New?</h1> 
         <ul>
             {menuOption}
         </ul>

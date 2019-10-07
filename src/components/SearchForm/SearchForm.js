@@ -37,7 +37,7 @@ class SearchForm extends Component {
                 value={this.state.input}
                 onChange={event => this.handleChange(event)}
                 />
-                <button onClick ={event => this.searchNews(event)}>Search Now</button>
+                <button className="search-btn" onClick ={event => this.searchNews(event)}>Search Now</button>
             </form>
         )
     };

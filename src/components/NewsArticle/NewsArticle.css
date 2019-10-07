@@ -1,9 +1,21 @@
 .newsArticle {
  background-color: #000222;
- justify-content: space-around;
  max-width: 500px;
 }
 
 .newsImage {
     width: 100%;
+}
+
+h3 {
+    padding: 10px;
+}
+
+footer {
+    height: 50px;
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }

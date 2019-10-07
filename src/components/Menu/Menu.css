@@ -12,6 +12,7 @@
 nav {
     float: left;
     width: 20%;
+    margin-top: 15px;
 }
 
 svg {
@@ -21,6 +22,11 @@ width: 25px;
 
 ul {
     text-align: left
+}
+
+h1 {
+    color: #F5AD06;
+    font-size: 1.7em;
 }
 
 .currentSelected {
