@@ -9,7 +9,6 @@ class SearchForm extends Component {
         };
     }
         handleChange = event => {
-            console.log("event", event)
             this.setState({ [event.target.name]: event.target.value })
         };
 
@@ -20,10 +19,13 @@ class SearchForm extends Component {
                 keyword: this.state.input
             }
 
-            this.props.searchNewsFor(newsTopicToSearch.keyword.toUpperCase())
-
-            this.setState({input: ""})
+            this.props.searchNewsFor(newsTopicToSearch.keyword.toUpperCase());
+            this.resetInput();
         };
+
+        resetInput = () => {
+            this.setState({input: ''})
+        }
 
     render() {
         return (
