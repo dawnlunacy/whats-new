@@ -1,7 +1,7 @@
 # What's New?
 
 ## Author
-* Lacy Rudd (([dawnlunacy])(https://github.com/dawnlunacy))
+* Lacy Rudd ([dawnlunacy](https://github.com/dawnlunacy))
 
 ## Overview
  What's New is my first project built using React, completed over 7 days. 
@@ -15,7 +15,7 @@
  * Testing (Enzyme/Jest)
 
  Project Management Tools Utilized: 
- * Trello ((Whats-new-board)(https://trello.com/b/SmKCUTHO/whats-new))
+ * Trello ([Whats-New](https://trello.com/b/SmKCUTHO/whats-new))
 
 ![what's new screenshot](./screenshots/whats-new.png)
 
