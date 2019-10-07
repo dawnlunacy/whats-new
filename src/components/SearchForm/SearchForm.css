@@ -8,23 +8,23 @@ form {
 }
 
 input {
-    height: 30px;
-    width: 45%;
-    margin-top: 10px;
     background-color: #141527;
-    text-align: center;
     color: white;
     font-size: 0.9em;
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    width: 45%;
 }
 
 .search-btn {
-    height: 30px;
-    width: 15%;
-    margin-top: 10px;
+    background-color: #B56BF1;
     border-radius: 50px;
-    text-align: center;
+    color: white;
     font-size: 0.7em;
     font-weight: bold;
-    background-color: #B56BF1;
-    color: white;
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    width: 15%;
 }
